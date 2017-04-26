@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Modules</h3><ul><li><a href="module-mocoolka-i18n-service.html">mocoolka-i18n-service</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-i18n-service.html#~startI18nService">startI18nService</a></li></ul></li><li><a href="module-mocoolka-tools-cldr.html">mocoolka-tools-cldr</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~getSupportedLanguage">getSupportedLanguage</a></li><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~getSupportedLanguages">getSupportedLanguages</a></li><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~isSupportedLanguage">isSupportedLanguage</a></li><li data-type='method'><a href="module-mocoolka-tools-cldr.html#~loadCldr">loadCldr</a></li></ul></li><li><a href="module-mocoolka-tools-i18n.html">mocoolka-tools-i18n</a><ul class='methods'><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatAbbreviation">formatAbbreviation</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatAbbreviations">formatAbbreviations</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatCurrencies">formatCurrencies</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatCurrency">formatCurrency</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatDate">formatDate</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatDates">formatDates</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatMessage">formatMessage</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatMessages">formatMessages</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatNumber">formatNumber</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatNumbers">formatNumbers</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatRelativeTime">formatRelativeTime</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatRelativeTimes">formatRelativeTimes</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatUnit">formatUnit</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~formatUnits">formatUnits</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~getSupportedLanguages">getSupportedLanguages</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~init">init</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~loadMessage">loadMessage</a></li><li data-type='method'><a href="module-mocoolka-tools-i18n.html#~plural">plural</a></li></ul></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+    <section class="readme">
+        <article><h1>mocoolka-setting</h1><p><a href="https://www.npmjs.com/package/mocoolka-setting"><img src="https://img.shields.io/npm/v/mocoolka-tools.svg" alt="npm package"></a> <a href="LICENSE.md"><img src="https://img.shields.io/npm/l/mocoolka-setting.svg" alt="license"></a></p>
+<p>Mocoolka-i18n is base module for mocoolka application.
+The module is for internationalization and localization that leverage the official Unicode CLDR JSON data. </p>
+<h2>Install</h2><pre class="prettyprint source lang-bash"><code>$ npm install mocoolka-i18n</code></pre><h2>Usage</h2><p>edit file &quot;messages.mk-message.json&quot; on intl directory </p>
+<pre class="prettyprint source lang-bash"><code>{
+  &quot;root&quot;: {
+    &quot;i18n&quot; :{
+      &quot;E-MISS-MESSAGE&quot; : &quot;Missing required message content '{value}'.&quot;,
+      &quot;E-MISS-FORMAT-MESSAGE&quot; : &quot;format {type} error. value:{value} options:{options} language:{language}.&quot;,
+      &quot;E-MISS-FORMAT-DATE&quot; : &quot;format date '{value}' error in language:{language} using options '{options}'.&quot;,
+      &quot;E-MISS-FORMAT-PLURAL&quot; : &quot;format plural '{value}' error in language:{language} using options '{options}'.&quot;,
+      &quot;E-MISS-FORMAT-NUMBER&quot; : &quot;format number '{value}' error in language:{language} using options '{options}'.&quot;,
+      &quot;E-MISS-FORMAT-RELATIVE-TIME&quot; : &quot;format relative date '{value}' error in language:{language} using options '{options}' and unit '{unit}'.&quot;,
+      &quot;E-MISS-FORMAT-CURRENCY&quot; : &quot;formatCurrency error. currencySymbol:{currencySymbol} value:{value} options:{options} language:{language}&quot;,
+      &quot;E-MISS-FORMAT-UNIT&quot; : &quot;formatUnit error. unit:{unit} value:{value} options:{options} language:{language}&quot;
+
+    },
+    &quot;ERROR&quot;: {
+      &quot;E-MISS-TYPE&quot; : &quot;The variable({variable})'s type expected is '{expected}',actual is '{actual}'&quot;,
+      &quot;E-DIR-NOT-EXIST&quot; : &quot;The path ({path}) is not a directory&quot;,
+      &quot;E-FILE-NOT-EXIST&quot; : &quot;The file be not found on '{path}'&quot;,
+      &quot;E-LANG-NOT-SUPPORT&quot; : &quot;The language ({language}) be not supported by Application.Application support is '{supportLanguages}'&quot;,
+      &quot;E-NOT-INIT&quot; : &quot;The module ({moduleName}) must init ,please first call function.&quot;,
+      &quot;E-NOT-BLANK&quot;: &quot;The variable can't be blank&quot;,
+      &quot;E-MISS-PARSE-FILE&quot; :&quot;The error be throw while file be parsed on '{path}'&quot;,
+      &quot;E-MISS-CALLBACK&quot; :&quot;callback function must exist&quot;
+    }
+  },
+  &quot;zh-Hans&quot;:{
+    &quot;i18n&quot; :{
+      &quot;E-MISS-PARSE-FILE&quot; :&quot;CLDR文件读取时发生错误{path}&quot;,
+      &quot;E-MISS-MESSAGE&quot; : &quot;'{value}'消息没有被发现，请核对配置消息配置文件.&quot;,
+      &quot;E-MISS-FORMAT-DATE&quot; : &quot;日期'{value}'格式化时发生错误，使用语言{language}选项为'{options}'.&quot;,
+      &quot;E-MISS-FORMAT-CURRENCY&quot; : &quot;格式化货币发生错误. 货币符号{currencySymbol} 值:{value} 选项:{options} 语言:{language}&quot;,
+      &quot;E-MISS-FORMAT-UNIT&quot; : &quot;格式化单位时货币发生错误. 单位:{unit}  值:{value} 选项:{options} 语言:{language}&quot;
+    },
+    &quot;ERROR&quot;: {
+      &quot;E-MISS-TYPE&quot; : &quot;类型错误。期望是 {expected},实际是 {actual}&quot;,
+      &quot;E-DIR-NOT-EXIST&quot; : &quot;{path} 文件路径不存在&quot;,
+      &quot;E-FILE-NOT-EXIST&quot; : &quot;没有找到指定的文件'{path}'&quot;,
+      &quot;E-LANG-NOT-SUPPORT&quot; : &quot;CLDR不支持{languageNotSupport} be not supported by CLDR.支持的语言有 {supportLanguages}&quot;,
+      &quot;E-NOT-INIT&quot; : &quot; 模块必须先初始化 {moduleName}  ,请先调用初速化函数 {initFunction}.&quot;,
+      &quot;E-NOT-BLANK&quot;: &quot;变量不能为空值&quot;,
+      &quot;E-MISS-CALLBACK&quot; :&quot;要求的回调函数不存在&quot;
+    }
+  }
+}</code></pre><p>start micro service </p>
+<pre class="prettyprint source lang-bash"><code> const i18nService = require('mocoolka-i18n');
+ i18nService(__dirname);</code></pre><p>format date </p>
+<pre class="prettyprint source lang-bash"><code>serviceTools.standClientPromise('mocoolka-i18n', 'formatDate',
+  {value: (new Date()).toUTCString()}).then(data=> {
+  console.log(data)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatDate',
+  {value: (new Date()).toUTCString(), language: 'zh-Hans'}).then(data=> {
+  console.log(data)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatDates',
+  {value: (new Date()).toUTCString()}).then(data=> {
+
+  console.log(data)
+}).catch(error=> {
+  console.error(error);
+});
+
+output:
+{ result: 'Apr 26, 2017, 9:05:28 AM' }
+{ result: '2017年4月26日 上午9:05:28' }
+{ result: 
+   { value: 'Wed, 26 Apr 2017 01:05:28 GMT',
+     message: 
+      { en: 'Apr 26, 2017, 9:05:28 AM',
+        'zh-Hans': '2017年4月26日 上午9:05:28' } } }</code></pre><p>format relative times </p>
+<pre class="prettyprint source lang-bash"><code>serviceTools.standClientPromise('mocoolka-i18n', 'formatRelativeTime',
+  {value: 30000, unit: 'second'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatRelativeTime',
+  {value: 30000, unit: 'second', language: 'zh-Hans'}).then(data=> {
+
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatRelativeTimes',
+  {value: 30000, unit: 'second'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+output:
+in 30,000 seconds
+30,000秒钟后
+{ value: 30000,
+  unit: 'second',
+  message: { en: 'in 30,000 seconds', 'zh-Hans': '30,000秒钟后' } }</code></pre><p>format unit</p>
+<pre class="prettyprint source lang-bash"><code>serviceTools.standClientPromise('mocoolka-i18n', 'formatUnit',
+  {value: 30000, unit: 'second'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatUnit',
+  {value: 30000, unit: 'second', language: 'zh-Hans'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatUnits',
+  {value: 30000, unit: 'second'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+output:
+30,000 sec
+30,000秒
+{ value: 30000,
+  unit: 'second',
+  message: { en: '30,000 sec', 'zh-Hans': '30,000秒' } }</code></pre><p>format currency</p>
+<pre class="prettyprint source lang-bash"><code>serviceTools.standClientPromise('mocoolka-i18n', 'formatCurrency',
+  {value: 30000, currencySymbol: 'USD'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatCurrency',
+  {value: 30000, currencySymbol: 'USD', language: 'zh-Hans'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatCurrencies',
+  {value: 30000, currencySymbol: 'USD'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+output:
+30,000.00 US dollars
+30,000.00美元
+{ value: 30000,
+  currencySymbol: 'USD',
+  message: { en: '30,000.00 US dollars', 'zh-Hans': '30,000.00美元' } }</code></pre><p>format number</p>
+<pre class="prettyprint source lang-bash"><code>serviceTools.standClientPromise('mocoolka-i18n', 'formatNumber',
+  {value: 30000}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatNumber',
+  {value: 30000, language: 'zh-Hans'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatNumbers',
+  {value: 30000}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+output:
+30,000
+30,000
+{ value: 30000, message: { en: '30,000', 'zh-Hans': '30,000' } }</code></pre><p>format plural</p>
+<pre class="prettyprint source lang-bash"><code>serviceTools.standClientPromise('mocoolka-i18n', 'plural',
+  {value: 30000}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+output:
+other</code></pre><p>load message</p>
+<pre class="prettyprint source lang-bash"><code>serviceTools.standClientPromise('mocoolka-i18n', 'loadMessage',
+  {rootPath: fileTools.path(__dirname, 'intl')}).then(data=> {
+  serviceTools.standClientPromise('mocoolka-i18n', 'formatMessage',
+    {id: 'log/start'}).then(data=> {
+    console.log(data.result)
+  }).catch(error=> {
+    console.error(error);
+  });</code></pre><p>format message</p>
+<pre class="prettyprint source lang-bash"><code>serviceTools.standClientPromise('mocoolka-i18n', 'formatMessage',
+  {id: 'i18n/E-MISS-MESSAGE', value: {value: 'test'}}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatMessage',
+  {id: 'i18n/E-MISS-MESSAGE', value: {value: 'test'}, language: 'zh-Hans'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatMessages',
+  {id: 'i18n/E-MISS-MESSAGE', value: {value: 'test'}}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+output:
+Missing required message content 'test'.
+'test'消息没有被发现，请核对配置消息配置文件.
+{ id: 'i18n/E-MISS-MESSAGE',
+  value: { value: 'test' },
+  message: 
+   { en: 'Missing required message content \'test\'.',
+     'zh-Hans': '\'test\'消息没有被发现，请核对配置消息配置文件.' } }</code></pre><p>format abbreviation</p>
+<pre class="prettyprint source lang-bash"><code>serviceTools.standClientPromise('mocoolka-i18n', 'formatAbbreviation',
+  {id: 'i18n/E-MISS-MESSAGE', value: {value: 'test'}}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatAbbreviation',
+  {id: 'i18n/E-MISS-MESSAGE', value: {value: 'test'}, language: 'zh-Hans'}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'formatAbbreviations',
+  {id: 'i18n/E-MISS-MESSAGE', value: {value: 'test'}}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+serviceTools.standClientPromise('mocoolka-i18n', 'getSupportedLanguages',
+  {}).then(data=> {
+  console.log(data.result)
+}).catch(error=> {
+  console.error(error);
+});
+
+output:
+Missing required message content 'test'.
+'test'消息没有被发现，请核对配置消息配置文件.
+{ id: 'i18n/E-MISS-MESSAGE',
+  value: { value: 'test' },
+  message: 
+   { en: 'Missing required message content \'test\'.',
+     'zh-Hans': '\'test\'消息没有被发现，请核对配置消息配置文件.' } }</code></pre><h2>Docs</h2><p><a href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/mocoolka/mocoolka-setting/master/docs/index.html">link to Docs!</a></p>
+<h2>License</h2><p>Licensed under the MIT, version 2.0. (see <a href="LICENSE.md">MIT</a>).</p></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.3</a> on Wed Apr 26 2017 09:34:37 GMT+0800 (中国标准时间) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

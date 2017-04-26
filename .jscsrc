@@ -1,0 +1,12 @@
+{
+  "preset": "airbnb",
+  "validateLineBreaks": null,
+  "disallowVar": true,
+  "jsDoc": {
+    "checkAnnotations": "jsdoc3",
+    "checkTypes": "strictNativeCase",
+    "checkParamExistence": true,
+    "requireParamTypes": true
+
+  }
+}

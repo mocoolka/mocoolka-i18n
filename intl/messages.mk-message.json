@@ -1,0 +1,46 @@
+{
+  "root": {
+    "i18n" :{
+      "E-MISS-MESSAGE" : "Missing required message content '{value}'.",
+      "E-MISS-FORMAT-MESSAGE" : "format {type} error. value:{value} options:{options} language:{language}.",
+      "E-MISS-FORMAT-DATE" : "format date '{value}' error in language:{language} using options '{options}'.",
+      "E-MISS-FORMAT-PLURAL" : "format plural '{value}' error in language:{language} using options '{options}'.",
+      "E-MISS-FORMAT-NUMBER" : "format number '{value}' error in language:{language} using options '{options}'.",
+      "E-MISS-FORMAT-RELATIVE-TIME" : "format relative date '{value}' error in language:{language} using options '{options}' and unit '{unit}'.",
+      "E-MISS-FORMAT-CURRENCY" : "formatCurrency error. currencySymbol:{currencySymbol} value:{value} options:{options} language:{language}",
+      "E-MISS-FORMAT-UNIT" : "formatUnit error. unit:{unit} value:{value} options:{options} language:{language}"
+
+    },
+    "ERROR": {
+      "E-MISS-TYPE" : "The variable({variable})'s type expected is '{expected}',actual is '{actual}'",
+      "E-DIR-NOT-EXIST" : "The path ({path}) is not a directory",
+      "E-FILE-NOT-EXIST" : "The file be not found on '{path}'",
+      "E-LANG-NOT-SUPPORT" : "The language ({language}) be not supported by Application.Application support is '{supportLanguages}'",
+      "E-NOT-INIT" : "The module ({moduleName}) must init ,please first call function.",
+      "E-NOT-BLANK": "The variable can't be blank",
+      "E-MISS-PARSE-FILE" :"The error be throw while file be parsed on '{path}'",
+      "E-MISS-CALLBACK" :"callback function must exist"
+    }
+  },
+  "zh-Hans":{
+    "i18n" :{
+      "E-MISS-PARSE-FILE" :"CLDR文件读取时发生错误{path}",
+      "E-MISS-MESSAGE" : "'{value}'消息没有被发现，请核对配置消息配置文件.",
+      "E-MISS-FORMAT-DATE" : "日期'{value}'格式化时发生错误，使用语言{language}选项为'{options}'.",
+      "E-MISS-FORMAT-CURRENCY" : "格式化货币发生错误. 货币符号{currencySymbol} 值:{value} 选项:{options} 语言:{language}",
+      "E-MISS-FORMAT-UNIT" : "格式化单位时货币发生错误. 单位:{unit}  值:{value} 选项:{options} 语言:{language}"
+    },
+    "ERROR": {
+      "E-MISS-TYPE" : "类型错误。期望是 {expected},实际是 {actual}",
+      "E-DIR-NOT-EXIST" : "{path} 文件路径不存在",
+      "E-FILE-NOT-EXIST" : "没有找到指定的文件'{path}'",
+      "E-LANG-NOT-SUPPORT" : "CLDR不支持{languageNotSupport} be not supported by CLDR.支持的语言有 {supportLanguages}",
+      "E-NOT-INIT" : " 模块必须先初始化 {moduleName}  ,请先调用初速化函数 {initFunction}.",
+      "E-NOT-BLANK": "变量不能为空值",
+      "E-MISS-CALLBACK" :"要求的回调函数不存在"
+    }
+  }
+}
+
+
+

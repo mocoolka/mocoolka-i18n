@@ -1,0 +1,29 @@
+{
+  "name": "mocoolka-i18n",
+  "version": "0.5.0",
+  "description": "mocoolka library for internationalization and localization ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha  ./test/*.js",
+    "importCldr": "node.exe -r  ./lib/util/app.js",
+    "jsdoc": "jsdoc -c jsdoc.json"
+  },
+  "keywords": [
+    "mocoolka",
+    "i18n"
+  ],
+  "dependencies": {
+    "globalize": "^1.2.3",
+    "mocoolka-tools": "^0.5.22"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "docdash":"*"
+  },
+  "author": "fastspeeed@gmail.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mocoolka/mocoolka-i18n.git"
+  }
+}
